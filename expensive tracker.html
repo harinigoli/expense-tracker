@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expensive Tracker</title>
+    <style>
+        header{
+            background-color: #45a049;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="#444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position-x: calc(100% - 10px);
+            background-position-y: center;
+            padding-right: 30px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        button{
+            padding-left: 500px;
+            padding-right: 500px;
+            background-color: #45a049;
+            font-size: 20px;
+            border: 10px;
+            cursor: pointer;
+        }
+        label{
+            color: darkblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <center> <h1>Expensive tracker</h1></center>
+    
+    <form>
+        <b><label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" min="0" step="0.01" required></b>
+        
+        <b><label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="">Select a category</option>
+            <option value="Food">Food</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Housing">Housing</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Others">Others</option></b>
+        </select>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+        <input type="submit" value="Submit">
+        
+        
+    </form>
+    </header>
+</body>
+</html>
